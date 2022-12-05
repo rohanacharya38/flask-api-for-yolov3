@@ -16,9 +16,7 @@ def upload_image():
         return {'error': 'Missing file'}, 400
     input_image=Image.open(file)
     output_image = process(input_image)
-    output_image.save("plot.png")
-    with open("plot.png", "rb") as img_file:
-        b64_bytes = base64.b64encode(img_file.read())
+    b64_bytes= base64.b64encode(output_image.getvalue())
     return b64_bytes
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000)

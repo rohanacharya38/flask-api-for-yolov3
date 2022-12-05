@@ -270,6 +270,7 @@ def plot_boxes(img, boxes, class_names, plot_labels = True, color = None):
     plt.axis('off')
     img_buf = io.BytesIO()
     plt.savefig(img_buf, format='png')
-    pil_image=Image.open(img_buf);
-    pil_image.save("lines.png")
-    return pil_image;
+    #pil_image=Image.open(img_buf);
+    #pil_image.save("lines.png")
+    #return pil_image;
+    return  img_buf
