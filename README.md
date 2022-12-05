@@ -1,1 +1,0 @@
-Simple falsk api using YOLO ml model
